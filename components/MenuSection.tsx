@@ -81,9 +81,9 @@ export default function MenuSection({ items }: { items: MenuItem[] }) {
           <button
             key={item.id}
             onClick={() => setSelected(item)}
-            className="group relative overflow-hidden rounded-2xl bg-coal-900 text-left ring-1 ring-white/5 transition-all hover:-translate-y-1 hover:ring-ember-500/40"
+            className="group flex flex-col overflow-hidden rounded-2xl bg-coal-900 text-left ring-1 ring-white/10 transition-all hover:-translate-y-1 hover:ring-ember-500/40"
           >
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={item.img}
@@ -91,7 +91,7 @@ export default function MenuSection({ items }: { items: MenuItem[] }) {
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-coal-950 via-coal-950/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-coal-950/70 via-transparent to-transparent" />
               {item.popular && (
                 <span className="absolute left-3 top-3 rounded-full bg-ember-500 px-2.5 py-1 text-xs font-semibold text-white shadow-lg">
                   ★ Popular
@@ -102,19 +102,24 @@ export default function MenuSection({ items }: { items: MenuItem[] }) {
                   V
                 </span>
               )}
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-4">
-                <div>
-                  <h3 className="text-lg font-bold text-cream-100">
+            </div>
+            <div className="flex flex-1 flex-col gap-2 border-t border-white/10 p-4">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <h3 className="text-base font-bold leading-tight text-cream-100">
                     {item.name}
                   </h3>
-                  <span className="font-jp text-sm text-cream-300/80">
+                  <span className="font-jp text-xs text-cream-300/70">
                     {item.jp}
                   </span>
                 </div>
-                <span className="shrink-0 rounded-lg bg-ember-500/90 px-2.5 py-1 text-sm font-bold text-white">
+                <span className="shrink-0 rounded-lg bg-ember-500 px-2.5 py-1 text-sm font-bold text-white shadow-md shadow-ember-500/25">
                   {formatPrice(item.price)}
                 </span>
               </div>
+              <p className="line-clamp-2 text-sm leading-snug text-cream-300/80">
+                {item.desc}
+              </p>
             </div>
           </button>
         ))}
