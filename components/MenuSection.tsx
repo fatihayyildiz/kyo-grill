@@ -34,7 +34,10 @@ export default function MenuSection({ items }: { items: MenuItem[] }) {
   }, [selected, close]);
 
   return (
-    <section id="menu" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="menu"
+      className="mx-auto max-w-7xl scroll-mt-[68px] px-4 py-20 sm:px-6 lg:px-8"
+    >
       <div className="mb-10 text-center">
         <p className="mb-2 font-jp text-sm tracking-[0.4em] text-ember-400">
           炭火焼き鳥
@@ -47,15 +50,15 @@ export default function MenuSection({ items }: { items: MenuItem[] }) {
         </p>
       </div>
 
-      {/* Category filter */}
-      <div className="mb-10 flex flex-wrap justify-center gap-2">
+      {/* Category filter — sticky: kaydirirken her zaman ustte kalir */}
+      <div className="sticky top-[68px] z-30 -mx-4 mb-10 flex gap-2 overflow-x-auto bg-coal-950/90 px-4 py-3 backdrop-blur-md [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:justify-center sm:px-0">
         {CATS.map((c) => {
           const active = cat === c.key;
           return (
             <button
               key={c.key}
               onClick={() => setCat(c.key)}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
+              className={`shrink-0 rounded-full px-5 py-2 text-sm font-medium transition-all ${
                 active
                   ? "bg-ember-500 text-white shadow-lg shadow-ember-500/25"
                   : "bg-coal-800 text-cream-300 hover:bg-coal-700 hover:text-cream-100"
