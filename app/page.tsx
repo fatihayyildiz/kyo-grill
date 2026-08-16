@@ -76,10 +76,10 @@ export default function Home() {
             KYO&nbsp;GRILL
           </h1>
           <p className="mt-3 font-jp text-xl text-cream-300 sm:text-2xl">
-            Japanese yakitori &amp; izakaya — Berlin
+            Japanese grill &amp; ramen — Berlin
           </p>
           <p className="mx-auto mt-6 max-w-xl text-cream-300/90">
-            Skewers over white-hot binchotan, small plates and cold sake.
+            Skewers over white-hot binchotan, ramen, small plates and cold sake.
             Two locations, one fire.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -168,6 +168,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Gallery ─────────────────────────────────────────── */}
+      <section id="gallery" className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mb-8 text-center">
+          <p className="mb-2 font-jp text-sm tracking-[0.4em] text-ember-400">
+            ギャラリー
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Inside Kyo Grill
+          </h2>
+        </div>
+        <div className="flex snap-x gap-4 overflow-x-auto pb-4">
+          {["gallery1", "gallery2", "gallery3", "gallery4", "gallery5", "gallery6"].map(
+            (g) => (
+              <div
+                key={g}
+                className="h-64 w-96 shrink-0 snap-start overflow-hidden rounded-2xl ring-1 ring-white/10"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/images/${g}.jpg`}
+                  alt="Kyo Grill — inside"
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+            )
+          )}
+        </div>
+      </section>
+
       {/* ── Contact / Footer ───────────────────────────────── */}
       <footer id="contact" className="border-t border-white/5 bg-coal-900">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-3 lg:px-8">
@@ -181,8 +211,8 @@ export default function Home() {
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm text-cream-300">
-              Japanese yakitori &amp; izakaya, grilled over binchotan
-              charcoal. Made in Berlin, fired by tradition.
+              Japanese grill &amp; ramen — skewers, ramen and sake. Made in
+              Berlin, fired by tradition.
             </p>
           </div>
           <div>

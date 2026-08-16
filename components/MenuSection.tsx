@@ -6,9 +6,10 @@ import { CATEGORY_LABELS, formatPrice } from "@/lib/menu";
 
 const CATS: { key: "all" | MenuItem["category"]; label: string }[] = [
   { key: "all", label: "All" },
-  { key: "yakitori", label: CATEGORY_LABELS.yakitori },
-  { key: "izakaya", label: CATEGORY_LABELS.izakaya },
-  { key: "desserts", label: CATEGORY_LABELS.desserts },
+  { key: "grill", label: CATEGORY_LABELS.grill },
+  { key: "sets", label: CATEGORY_LABELS.sets },
+  { key: "starters", label: CATEGORY_LABELS.starters },
+  { key: "ramen", label: CATEGORY_LABELS.ramen },
   { key: "drinks", label: CATEGORY_LABELS.drinks },
 ];
 
