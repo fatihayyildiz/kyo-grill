@@ -3,20 +3,22 @@ import { MENU } from "@/lib/menu";
 
 const BRANCHES = [
   {
-    name: "Kyo Grill · Mitte",
-    jp: "ミッテ店",
-    addr: "Torstraße 112, 10119 Berlin",
+    name: "Kyo Grill · Prenzlauer Berg",
+    jp: "プレンツラウアーベルク店",
+    addr: "Kastanienallee 23, 10435 Berlin",
     hours: "Mon – Sun · 17:00 – 23:00",
+    est: 2004,
     img: "/images/branch1.jpg",
-    maps: "https://www.google.com/maps/search/?api=1&query=Torstra%C3%9Fe+112%2C+10119+Berlin",
+    maps: "https://www.google.com/maps/search/?api=1&query=Kastanienallee+23%2C+10435+Berlin",
   },
   {
-    name: "Kyo Grill · Kreuzberg",
-    jp: "クロイツベルク店",
-    addr: "Oranienstraße 45, 10969 Berlin",
+    name: "Kyo Grill · Friedrichshain",
+    jp: "フリードリヒスハイン店",
+    addr: "Krossener Str. 14, 10245 Berlin",
     hours: "Mon – Thu 17:00 – 23:00 · Fri – Sat 17:00 – 00:00",
+    est: 2025,
     img: "/images/branch2.jpg",
-    maps: "https://www.google.com/maps/search/?api=1&query=Oranienstra%C3%9Fe+45%2C+10969+Berlin",
+    maps: "https://www.google.com/maps/search/?api=1&query=Krossener+Str.+14%2C+10245+Berlin",
   },
 ];
 
@@ -148,6 +150,9 @@ export default function Home() {
                 <div>
                   <p className="text-cream-100">{b.addr}</p>
                   <p className="mt-1 text-sm text-cream-300">{b.hours}</p>
+                  <p className="mt-1 text-xs font-medium uppercase tracking-widest text-ember-400/90">
+                    Since {b.est}
+                  </p>
                 </div>
                 <a
                   href={b.maps}
@@ -186,14 +191,14 @@ export default function Home() {
             </h4>
             <ul className="space-y-3 text-sm text-cream-300">
               <li>
-                <span className="font-semibold text-cream-100">Mitte</span> —
-                Torstraße 112, 10119 Berlin
+                <span className="font-semibold text-cream-100">Prenzlauer Berg</span> —
+                Kastanienallee 23, 10435 Berlin
               </li>
               <li>
                 <span className="font-semibold text-cream-100">
-                  Kreuzberg
+                  Friedrichshain
                 </span>{" "}
-                — Oranienstraße 45, 10969 Berlin
+                — Krossener Str. 14, 10245 Berlin
               </li>
             </ul>
           </div>
