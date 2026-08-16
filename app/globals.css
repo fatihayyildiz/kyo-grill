@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-coal-950: #0a0908;
+  --color-coal-900: #12100e;
+  --color-coal-800: #1a1714;
+  --color-coal-700: #262220;
+  --color-coal-600: #38312c;
+  --color-ember-600: #c23a1c;
+  --color-ember-500: #e8502a;
+  --color-ember-400: #f0653a;
+  --color-glow-400: #f5b06a;
+  --color-cream-100: #f5f0e8;
+  --color-cream-300: #d9cfc0;
+  --color-cream-500: #a89a8a;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-geist-sans), "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    "Meiryo", sans-serif;
+  --font-jp: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Noto Sans JP",
+    sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-marquee: marquee 42s linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-coal-950);
+  color: var(--color-cream-100);
+}
+
+::selection {
+  background: var(--color-ember-500);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-coal-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-coal-600);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ember-600);
 }
