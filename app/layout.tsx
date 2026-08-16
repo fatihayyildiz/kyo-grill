@@ -13,15 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iyogrill.example"),
+  metadataBase: new URL("https://kyogrill.example"),
   title: {
-    default: "Iyo Grill — Japanese Yakitori & Izakaya in Berlin",
-    template: "%s | Iyo Grill",
+    default: "Kyo Grill — Japanese Yakitori & Izakaya in Berlin",
+    template: "%s | Kyo Grill",
   },
   description:
-    "Iyo Grill — binchotan charcoal yakitori and izakaya classics in two Berlin locations (Mitte & Kreuzberg). Skewers, sake and small plates, grilled over real fire.",
+    "Kyo Grill — binchotan charcoal yakitori and izakaya classics in two Berlin locations (Mitte & Kreuzberg). Skewers, sake and small plates, grilled over real fire.",
   openGraph: {
-    title: "Iyo Grill — Japanese Yakitori & Izakaya in Berlin",
+    title: "Kyo Grill — Japanese Yakitori & Izakaya in Berlin",
     description:
       "Binchotan charcoal yakitori in the heart of Berlin. Two locations: Mitte & Kreuzberg.",
     locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iyo Grill — Japanese Yakitori & Izakaya in Berlin",
+    title: "Kyo Grill — Japanese Yakitori & Izakaya in Berlin",
     description: "Charcoal yakitori, two Berlin locations.",
     images: ["/images/hero.jpg"],
   },

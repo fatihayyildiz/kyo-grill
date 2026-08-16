@@ -3,7 +3,7 @@ import { MENU } from "@/lib/menu";
 
 const BRANCHES = [
   {
-    name: "Iyo Grill · Mitte",
+    name: "Kyo Grill · Mitte",
     jp: "ミッテ店",
     addr: "Torstraße 112, 10119 Berlin",
     hours: "Mon – Sun · 17:00 – 23:00",
@@ -11,7 +11,7 @@ const BRANCHES = [
     maps: "https://www.google.com/maps/search/?api=1&query=Torstra%C3%9Fe+112%2C+10119+Berlin",
   },
   {
-    name: "Iyo Grill · Kreuzberg",
+    name: "Kyo Grill · Kreuzberg",
     jp: "クロイツベルク店",
     addr: "Oranienstraße 45, 10969 Berlin",
     hours: "Mon – Thu 17:00 – 23:00 · Fri – Sat 17:00 – 00:00",
@@ -34,7 +34,7 @@ export default function Home() {
               井
             </span>
             <span className="text-lg font-bold tracking-widest">
-              IYO&nbsp;GRILL
+              KYO&nbsp;GRILL
             </span>
           </a>
           <div className="hidden items-center gap-8 text-sm font-medium text-cream-300 sm:flex">
@@ -62,7 +62,7 @@ export default function Home() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/hero.jpg"
-          alt="Iyo Grill — charcoal yakitori"
+          alt="Kyo Grill — charcoal yakitori"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-coal-950/80 via-coal-950/40 to-coal-950" />
@@ -71,7 +71,7 @@ export default function Home() {
             炭火焼き鳥 · Binchotan Charcoal Grill
           </p>
           <h1 className="text-6xl font-black tracking-tight text-cream-100 sm:text-8xl">
-            IYO&nbsp;GRILL
+            KYO&nbsp;GRILL
           </h1>
           <p className="mt-3 font-jp text-xl text-cream-300 sm:text-2xl">
             Japanese yakitori &amp; izakaya — Berlin
@@ -172,7 +172,7 @@ export default function Home() {
                 井
               </span>
               <span className="text-lg font-bold tracking-widest">
-                IYO&nbsp;GRILL
+                KYO&nbsp;GRILL
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm text-cream-300">
@@ -204,10 +204,10 @@ export default function Home() {
             <ul className="space-y-3 text-sm text-cream-300">
               <li>
                 <a
-                  href="mailto:hello@iyogrill.berlin"
+                  href="mailto:hello@kyogrill.berlin"
                   className="transition hover:text-ember-400"
                 >
-                  hello@iyogrill.berlin
+                  hello@kyogrill.berlin
                 </a>
               </li>
               <li>
@@ -225,14 +225,14 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="transition hover:text-ember-400"
                 >
-                  @iyogrill.berlin
+                  @kyogrill.berlin
                 </a>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-white/5 py-6 text-center text-xs text-cream-500">
-          © {new Date().getFullYear()} Iyo Grill Berlin · 焼き鳥と友情 ·
+          © {new Date().getFullYear()} Kyo Grill Berlin · 焼き鳥と友情 ·
           Made with 🔥 &amp; binchotan
         </div>
       </footer>
