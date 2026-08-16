@@ -87,13 +87,13 @@ export default function MenuSection({ items }: { items: MenuItem[] }) {
             onClick={() => setSelected(item)}
             className="group flex flex-col overflow-hidden rounded-2xl bg-coal-900 text-left ring-1 ring-white/10 transition-all hover:-translate-y-1 hover:ring-ember-500/40"
           >
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative overflow-hidden pt-[75%]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={item.img}
                 alt={item.name}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-coal-950/70 via-transparent to-transparent" />
               {item.popular && (
@@ -145,12 +145,12 @@ export default function MenuSection({ items }: { items: MenuItem[] }) {
             className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-coal-900 ring-1 ring-white/10"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-video">
+            <div className="relative overflow-hidden pt-[56.25%]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={selected.img}
                 alt={selected.name}
-                className="h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-coal-900 to-transparent" />
               <button

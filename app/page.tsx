@@ -132,13 +132,13 @@ export default function Home() {
               key={b.name}
               className="group overflow-hidden rounded-3xl bg-coal-900 ring-1 ring-white/5"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative overflow-hidden pt-[62.5%]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={b.img}
                   alt={b.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-coal-950/90 to-transparent" />
                 <div className="absolute bottom-4 left-5">
