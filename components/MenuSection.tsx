@@ -87,7 +87,7 @@ export default function MenuSection({ items }: { items: MenuItem[] }) {
             onClick={() => setSelected(item)}
             className="group flex flex-col overflow-hidden rounded-2xl bg-coal-900 text-left ring-1 ring-white/10 transition-all hover:-translate-y-1 hover:ring-ember-500/40"
           >
-            <div className="relative overflow-hidden pt-[75%]">
+            <div className="relative overflow-hidden pt-[100%]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={item.img}

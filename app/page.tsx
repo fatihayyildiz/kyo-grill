@@ -132,7 +132,7 @@ export default function Home() {
               key={b.name}
               className="group overflow-hidden rounded-3xl bg-coal-900 ring-1 ring-white/5"
             >
-              <div className="relative overflow-hidden pt-[62.5%]">
+              <div className="relative overflow-hidden pt-[125%]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={b.img}
@@ -183,7 +183,7 @@ export default function Home() {
             (g) => (
               <div
                 key={g}
-                className="h-64 w-96 shrink-0 snap-start overflow-hidden rounded-2xl ring-1 ring-white/10"
+                className="h-64 w-[78vw] max-w-96 shrink-0 snap-start overflow-hidden rounded-2xl ring-1 ring-white/10"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
